@@ -1,7 +1,7 @@
-url = 'http://laravel_crud_vue.test/'
+url = 'http://crud_vue.test/'
 
 const main = new Vue({
-    el: '#main',
+    el: '#app',
     created: function(){
         this.getUsers()
         this.imprimir()
@@ -15,24 +15,19 @@ const main = new Vue({
     methods: {
         getUsers: function(){
             axios.get(url).then(response => {
-                this.lists  = response.data
-              
+                this.lists  = response.data      
             })
         },
+
         imprimir: function(){
-
-            search =  document.getElementById('search').value;
-            url = 'http://laravel_crud_vue.test/user/'+search
-             
-            
-            axios.get(url).then(response => {
-                this.lists  = response.data
-                this.lists.forEach(element => {
-                    console.log(element.name)
-                });
+           search = document.getElementById('search').value;
+           url = 'http://crud_vue.test/user/'+search
+           axios.get(url).then(response => {
+            this.lists  = response.data
+            this.lists.forEach(element => {
+                console.log(element.name)
             });
+        });
         }
-
-       
     }
 })
