@@ -13,11 +13,10 @@
     
 
 
-    <form >
-       <input id="search" type="text"  value="2"  >
-       <button on:click ="imprimir">Buscar</button>
+    
+       <input id="search" type="text"  v-model ="busqueda" >
+       <button v-on:click ="imprimir">Buscar</button>
  
-    </form>
     
     <table class="table">
         <thead>

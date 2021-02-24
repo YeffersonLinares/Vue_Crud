@@ -1,16 +1,18 @@
 url = 'http://laravel_crud_vue.test/'
 
-const main = new Vue({
-    el: '#main',
+const app = new Vue({
+    el: '#app',
     created: function(){
         this.getUsers()
-        this.imprimir()
+
+       
     },
     mounted: function(){
         //setInterval(this.getUsers,5000)
     },
     data:{
-        lists: []
+        lists: [],
+     
     },
     methods: {
         getUsers: function(){
@@ -19,7 +21,7 @@ const main = new Vue({
               
             })
         },
-        imprimir: function(){
+        imprimir :function (){
 
             search =  document.getElementById('search').value;
             url = 'http://laravel_crud_vue.test/user/'+search
