@@ -20,8 +20,6 @@ const app = new Vue({
                 this.lists  = response.data      
             })
         },
-        imprimir :function (){
-
         imprimir: function(){
            search = document.getElementById('search').value;
            url = 'http://crud_vue.test/user/'+search
