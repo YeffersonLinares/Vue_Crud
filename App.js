@@ -1,16 +1,18 @@
 url = 'http://crud_vue.test/'
 
-const main = new Vue({
+const app = new Vue({
     el: '#app',
     created: function(){
         this.getUsers()
-        this.imprimir()
+
+       
     },
     mounted: function(){
         //setInterval(this.getUsers,5000)
     },
     data:{
-        lists: []
+        lists: [],
+     
     },
     methods: {
         getUsers: function(){
@@ -18,6 +20,7 @@ const main = new Vue({
                 this.lists  = response.data      
             })
         },
+        imprimir :function (){
 
         imprimir: function(){
            search = document.getElementById('search').value;
