@@ -8,6 +8,16 @@
     <title>AGREGAR</title>
 </head>
 <body>
+    <br><br><br>
+    <div class="container my-5 border" id="app">
+            <center>
+                <h3 style="color: teal">Regristro de usuarios</h3>
+            <input type="text" v-model="name" placeholder="Nombre"class="my-2"><br>
+            <input type="text" v-model="email" placeholder="Correo electronico" class="my-2"><br>
+            <input type="text" v-model="password" placeholder="Contraseña" class="my-2"><br>
+            <button type="submit" class="btn btn-success" v-on:click="addUser">Guardar</button>
+            </center>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>

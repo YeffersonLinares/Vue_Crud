@@ -11,21 +11,21 @@ const app = new Vue({
         //setInterval(this.getUsers,5000)
     },
     data:{
-        lists: [],
+        users: [],
      
     },
     methods: {
         getUsers: function(){
             axios.get(url).then(response => {
-                this.lists  = response.data      
+                this.users  = response.data      
             })
         },
         imprimir: function(){
            search = document.getElementById('search').value;
            url = 'http://crud_vue.test/user/'+search
            axios.get(url).then(response => {
-            this.lists  = response.data
-            this.lists.forEach(element => {
+            this.users  = response.data
+            this.users.forEach(element => {
                 console.log(element.name)
             });
         });

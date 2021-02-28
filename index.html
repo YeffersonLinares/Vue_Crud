@@ -11,22 +11,22 @@
     <div id="app" class="container my-5">
         <a href="agregar.html" class="btn btn-success"> Agregar </a>
     
-       <input id="search" type="text"  v-model ="busqueda" >
+       <input id="search" type="text">
        <button v-on:click ="imprimir">Buscar</button>
     
     <table class="table">
         <thead>
             <tr>
-                <th>Código</th>
+                <th>ID</th>
                 <th>Nombre</th>
-                <th>Contraseña</th>
+                <th>Email</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>name test</td>
-                <td>password test</td>
+            <tr v-for="key in users">
+                <td>{{ key.id }}</td>
+                <td>{{ key.name }}</td>
+                <td>{{ key.email }}</td>
             </tr>
         </tbody>
     </table>
